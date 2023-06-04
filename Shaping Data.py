@@ -13,6 +13,10 @@ from lxml import objectify
 import pandas as pd
 from distutils import util
 
+#try to import nltk to fix module error
+#import nltk
+#from nltk import punkt
+
 xml = objectify.parse(open('XMLData.xml'))
 root = xml.getroot()
 df = pd.DataFrame(columns=('Number', 'Boolean'))
